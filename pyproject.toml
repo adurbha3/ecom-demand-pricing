@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["demandpricing*"]
+
+[project]
+name = "ecom-demand-pricing"
+version = "0.1.0"
+description = "Ecommerce demand forecasting (baseline/gradient-boosting/PyTorch comparison) and elasticity-based dynamic pricing, with hyperparameter tuning and experiment logging"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "torch>=2.0",
+    "matplotlib>=3.7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
